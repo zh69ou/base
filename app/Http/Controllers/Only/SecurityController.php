@@ -21,7 +21,7 @@ class SecurityController extends Controller
         $arr['status']=1;
         if (!Auth::check()) {
             $validator = Validator::make($request->all(), [
-                'username' => 'required|max:18|min:6',
+                'username' => 'required|max:18|min:3',
                 'password' => 'required',
             ]);
             if ($validator->fails()&&Auth::attempt(['username' => $request->get('username'), 'password' => Hash::make($request->get('password'))])) {

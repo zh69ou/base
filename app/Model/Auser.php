@@ -26,9 +26,4 @@ class Auser extends Model
     protected $hidden = [
         'password',
     ];
-
-    public function uland()
-    {
-        return $this->hasMany('App\Model\Userland');
-    }
 }
