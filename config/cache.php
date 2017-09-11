@@ -86,6 +86,9 @@ return [
     |
     */
 
-    'prefix' => 'a6vi',
+    'prefix' => env(
+        'CACHE_PREFIX',
+        str_slug(env('APP_NAME', 'a6vi'), '_').'_cache'
+    ),
 
 ];
